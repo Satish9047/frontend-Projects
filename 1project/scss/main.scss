@@ -9,6 +9,25 @@
 
 @import "components/button";
 
+@import "layout/grid";
 @import "layout/header";
 
 @import "pages/home";
+
+//basic responsive design principles
+
+// 1. Fluid layout - float layout, flexbox, css grid
+//    adopt currennt view port width or height
+//    using % or vh/ vw unit instead of px
+//    using max-width instead of width
+
+// 2. Responsive units
+//    to make it easy to scale the entire layout down or up automatically
+//    use rem units instead of px for most lengths
+
+// 3. Flexile images
+//    by default, images don't scale autoatically as we chage the viewport. so we eed to fix that
+//    always use % for images diamensions, together with the max-width property
+
+// 4. Media Queries
+//    to change CSS styles on certain viewport widths called breakpoints
