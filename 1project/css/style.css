@@ -1,3 +1,16 @@
+/*
+0-600px:      Phone
+600-900px:    Tablet portrait
+900-1200px:   Tablet landscape
+{1200-1800px} is where our normal styles applyies
+1800px:       Big desktop
+
+breakpoint choices
+  -phone
+  -tab-port
+  -tab-land
+  -big-desktop
+*/
 /* animation frames */
 @keyframes moveInRight {
   0% {
@@ -40,6 +53,15 @@
 html {
   /* font-size: 10px; */
   font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -470,7 +492,7 @@ body {
   z-index: 30;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.8s ease; }
+  transition: all 0.3s ease; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -489,7 +511,8 @@ body {
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5); }
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.4s 0.2s ease; }
   .popup__left {
     width: 33.33%;
     display: table-cell; }
